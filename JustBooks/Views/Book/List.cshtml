@@ -1,0 +1,15 @@
+﻿@model BookListViewModel
+
+<div>
+    <h2>Get All Books Here</h2>
+</div>
+<div class="icon">
+    <a asp-action="Addbooks" asp-controller="AddBook"><i class="fas fa-chevron-circle-left"><span class="span-text">Back</span></i></a>
+</div>
+<!--<h2>@Model.CurrentGenre</h2>-->
+
+        <div class="wrapper">
+
+            <partial name="~/Views/Book/BookSummary.cshtml" />
+
+        </div>

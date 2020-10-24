@@ -1,0 +1,62 @@
+﻿@model JustBooks.Models.BooksViewModel
+
+@{
+    ViewData["Title"] = "Addbooks";
+}
+
+
+<h2>Upload Book to Database</h2>
+<hr />
+
+<form method="post" enctype="multipart/form-data" asp-action="Addbooks">
+    <div>
+        <label>Title:</label>
+        <input asp-for="Title" type="text" name="title" id="title" />
+    </div>
+    <div>
+        <label>Author:</label>
+        <input asp-for="Author" type="text" name="author" id="author" />
+    </div>
+    <div>
+        <label>Genre Type:</label>
+        <select asp-for="GenreType" name="genretype" id="genretype">
+            <option>Business</option>
+            <option>Religious</option>
+            <option>Christian Literature</option>
+            <option>Romance</option>
+            <option>Biography</option>
+        </select>
+    </div>
+    <div>
+        <label>Genre Id:</label>
+        <select asp-for="GenreId" name="genreid" id="genreid">
+            <option>1</option>
+            <option>2</option>
+        </select>
+    </div>
+    <div>
+        <label>Book Description:</label>
+       <textarea asp-for="About" name="about" id="about"></textarea>
+    </div>
+    <div>
+        <label>price:</label>
+        <input asp-for="Price" type="number" name="price" id="price" />
+    </div>
+    <div>
+        <label>Preference:</label>
+        <label for="true">True</label>
+        <input asp-for="IsPreferredBook" type="radio" name="prefer" id="prefer" value="true" />
+        <label for="false">False</label>
+        <input asp-for="IsPreferredBook" type="radio" name="prefer" id="prefer" value="false" />
+    </div>
+    <div>
+        <label>Upload Image:</label>
+        <input asp-for="Image" type="file"  id="ifile" />
+    </div>
+    <input type="submit" value="Upload" />
+</form>
+
+
+
+
+
